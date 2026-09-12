@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/status_searching"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:paddingBottom="12dp" />
+
+        <!-- Shown while looking for another device, right after opening the app -->
+        <LinearLayout
+            android:id="@+id/searchingGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="40dp">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/searching_hint" />
+        </LinearLayout>
+
+        <!-- Shown as soon as two phones connect: pick a role -->
+        <LinearLayout
+            android:id="@+id/choiceGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnChooseReceive"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="12dp"
+                android:textSize="18sp"
+                android:text="@string/btn_receive" />
+
+            <Button
+                android:id="@+id/btnChooseSend"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:textSize="18sp"
+                android:text="@string/btn_send" />
+        </LinearLayout>
+
+        <!-- Receive mode: just waits, shows whatever arrives -->
+        <LinearLayout
+            android:id="@+id/receiveGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/waiting_for_data"
+                android:textSize="16sp"
+                android:paddingBottom="8dp" />
+
+            <ImageView
+                android:id="@+id/receivedImage"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scaleType="centerInside"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnPlayVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                android:text="@string/btn_play_video" />
+
+            <Button
+                android:id="@+id/btnSaveContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                android:text="@string/btn_save_contact" />
+        </LinearLayout>
+
+        <!-- Send mode: choose what to send -->
+        <LinearLayout
+            android:id="@+id/sendGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/editMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_message" />
+
+            <Button
+                android:id="@+id/btnSendText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/btn_send_text" />
+
+            <Button
+                android:id="@+id/btnSendImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/btn_send_image" />
+
+            <Button
+                android:id="@+id/btnSendVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/btn_send_video" />
+
+            <Button
+                android:id="@+id/btnSendContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/btn_send_contact" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/logText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="monospace"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            android:text="@string/btn_reset" />
+
+    </LinearLayout>
+</ScrollView>
