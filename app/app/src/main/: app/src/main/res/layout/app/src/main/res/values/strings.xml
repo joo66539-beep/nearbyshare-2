@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">مشاركة قريبة</string>
+    <string name="status_searching">بيدور على جهاز قريب...</string>
+    <string name="status_connected">اتصل بجهاز! اختار إيه اللي عايز تعمله</string>
+    <string name="searching_hint">قرّب الجهاز من جهاز تاني شغال عليه نفس التطبيق</string>
+    <string name="btn_receive">📥 استلام</string>
+    <string name="btn_send">📤 إرسال</string>
+    <string name="waiting_for_data">في انتظار الاستلام...</string>
+    <string name="btn_play_video">▶️ شغّل الفيديو المستلم</string>
+    <string name="btn_save_contact">👤 حفظ جهة الاتصال</string>
+    <string name="hint_message">اكتب رسالة تبعتها</string>
+    <string name="btn_send_text">إرسال نص</string>
+    <string name="btn_send_image">🖼️ اختار وابعت صورة</string>
+    <string name="btn_send_video">🎬 اختار وابعت فيديو</string>
+    <string name="btn_send_contact">👤 اختار وابعت جهة اتصال</string>
+    <string name="btn_reset">🔄 إعادة / اتصل بجهاز تاني</string>
+</resources>
